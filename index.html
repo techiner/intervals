@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+        <title>Node js Handlebars</title>
+    </head>
+    <body>
+      <button class="start">Начать</button>
+      
+      <label for="nQuestions">Количество попыток</label>
+      <select name="" id="nQuestions">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+        <option value="60">60</option>
+      </select>
+      
+      
+      <fieldset class="order">
+        <legend>Порядок:</legend>
+        <div>
+          <input type="checkbox" id="asc" name="asc" />
+          <label for="asc">Возрастающий</label>
+        </div>
+        <div>
+          <input type="checkbox" id="desc" name="desc" />
+          <label for="desc">Убывающий</label>
+        </div>
+        <div>
+          <input type="checkbox" id="garm" name="garm" />
+          <label for="garm">Гармонический</label>
+        </div>
+      </fieldset>
+      
+      <fieldset class="intervals">
+        <legend>Интервалы:</legend>
+        <div>
+          <input type="radio" id="lvl_1" name="interval" value="lvl_1" />
+          <label for="lvl_1">Секунды</label>
+        </div>
+        <div>
+          <input type="radio" id="lvl_2" name="interval" value="lvl_2" />
+          <label for="lvl_2">Терции</label>
+        </div>
+        <div>
+          <input type="radio" id="lvl_3" name="interval" value="lvl_3" />
+          <label for="lvl_3">Секунды, терции</label>
+        </div>
+        <div>
+          <input type="radio" id="lvl_4" name="interval" value="lvl_4" />
+          <label for="lvl_4">Кварта, тритон, квинта</label>
+        </div>
+          <div>
+          <input type="radio" id="lvl_5" name="interval" value="lvl_5" />
+          <label for="lvl_5">От секунд до квинты</label>
+        </div>
+        
+        <div>
+          <input type="radio" id="lvl_6" name="interval" value="lvl_6" />
+          <label for="lvl_6">Сексты</label>
+        </div>
+        <div>
+          <input type="radio" id="lvl_7" name="interval" value="lvl_7" />
+          <label for="lvl_7">Септимы, октава</label>
+        </div>
+        <div>
+          <input type="radio" id="lvl_8" name="interval" value="lvl_8" />
+          <label for="lvl_8">Сексты, септимы и октава</label>
+        </div>
+        <div>
+          <input type="radio" id="lvl_9" name="interval" value="lvl_9" />
+          <label for="lvl_9">От кварты до октавы</label>
+        </div>
+        <div>
+          <input type="radio" id="lvl_10" name="interval" value="lvl_10" />
+          <label for="lvl_10">Вся октава</label>
+        </div>
+      </fieldset>
+      
+      
+      <button class="play">Проиграть</button>
+      
+      <div>Правильных: <span class="nResult"></span></div>
+      <div>Текущий: <span class="nCurrentQuest"></span></div>
+      <div>Всего: <span class="nAllQuests"></span></div>
+      
+      <audio id="pl_1" controls hidden></audio>
+      <audio id="pl_2" controls hidden></audio>
+      <audio id="pl_tools" controls hidden></audio>
+      <script src="./assets/js/home.js"></script>
+    </body>
+    <style>
+        body {
+            background-color: black;
+            color: #ccc
+        }
+    </style>
+</html>
