@@ -231,6 +231,11 @@ let generate = () => {
   note1 = rand(notes.length - nInterval - 1)
   note2 = note1 + nInterval
   // Вычисляем порядок запуска нот
+  if (arrOrder[nOrder] == "desc") {
+    let x = note1
+    note1 = note2
+    note2 = x
+  }
   switch (arrOrder[nOrder]) {
     case "asc": arrInterval = [note1, note2].sort((a, b) => a - b).map((note) => notes[note]); break;
     case "desc": arrInterval = [note1, note2].sort((a, b) => b - a).map((note) => notes[note]); break;
